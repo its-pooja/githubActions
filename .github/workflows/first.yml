@@ -3,21 +3,23 @@ name: first
 on: push
 
 jobs:
+  
   job1:
-    name: Run on Ubuntu machine
-    runs-on: ubuntu-latest
-    steps:
-     -name: Checkout the code - Ubuntu
-      uses: actions/checkout@v2
-     -name: Print ENV on Ubuntu
-      run: env | sort
-     
-  job2: 
-    name: Run on Windows machine
-    runs-on: windows-latest
-    steps:
-    -name: Checkout code - Windows
-     uses: actions/checkout@v2
-    -name: Print ENV on windows
-     run: "Get-ChildItem Env: | Sort-Object Name 
+      name: first job
+      runs-on: ubuntu-latest
+      steps: 
+      -name: step one
+       uses: actions/checkout@v2
+      -name: step2
+       run: env | sort
+
+ 
+#   job2: 
+#     name: Run on Windows machine
+#     runs-on: windows-latest
+#     steps:
+#     -name: Checkout code - Windows
+#      uses: actions/checkout@v2
+#     -name: Print ENV on windows
+#      run: "Get-ChildItem Env: | Sort-Object Name 
   
