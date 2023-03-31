@@ -7,12 +7,12 @@ jobs:
     name: Run on Ubuntu machine
     runs-on: ubuntu-latest
     steps:
-    -name: Checkout the code - Ubuntu
-     uses: actions/checkout@v2
-    -name: Print ENV on Ubuntu
-     run: env | sort
+     -name: Checkout the code - Ubuntu
+      uses: actions/checkout@v2
+     -name: Print ENV on Ubuntu
+      run: env | sort
      
-  job2:
+  job2: 
     name: Run on Windows machine
     runs-on: windows-latest
     steps:
